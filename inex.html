@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Интернет-магазин по продаже Комиксов</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/itc-slider.css">
+  <link rel="stylesheet" href="css/accordion.css">
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+      <nav class="nav">
+        <h3 class="logo">Интернет-магазин по продаже Комиксов</h3>
+
+        <ul class="nav__list">
+          <li class="nav__item"><a href="#" class="nav__link">Главная</a></li>
+          <li class="nav__item"><a href="#" class="nav__link">Комиксы 13 карт</a></li>
+          <li class="nav__item"><a href="#" class="nav__link">Комиксы Marvel</a></li>
+          <li class="nav__item"><a href="#" class="nav__link">Комиксы DC</a></li>
+        </ul>
+        <div class="burger" onclick="burgerClick()">
+          <div class="burger__line burger__line_1"></div>
+          <div class="burger__line burger__line_2"></div>
+          <div class="burger__line burger__line_3"></div>
+        </div>
+        </ul>
+      </nav>
+      <button class="btn_menu" id="btn-menu">Меню</button>
+      <div class="header_menu" id="menu">
+        <ul class="menu_list">
+          <li class="menu__item">
+            <a href="#">Вход</a>
+          </li>
+          <li class="menu__item">
+            <a href="#">корзина</a>
+          </li>
+          <li class="menu__item">
+            <a href="#">Акция</a>
+          </li>
+          <li class="menu__item">
+            <a href="#">Реклама</a>
+          </li>
+          <li class="menu__item">
+            <div class="theme">
+              <h4 class="theme__title">Тема</h4>
+              <ul class="theme__list">
+                <li class="theme__item">
+                  <div class="theme__main" onclick="choiceMain()"></div>
+                </li>
+                <li class="theme__item">
+                  <div class="theme__second" onclick="choiceSecond()"></div>
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </header>
+
+  <main>
+    <section class="shop">
+      <div class="container">
+        <h1 class="shop__title">13 карт</h1>
+        <div class="itc-slider" data-slider="itc-slider">
+          <div class="itc-slider-wrapper">
+            <div class="itc-slider-items">
+              <div class="itc-slider-item">
+                <img src="img/8d5c6ccb5fec7fbf2e741793a5513d04.jpg" alt="" class="shop__img1">
+              </div>
+              <div class="itc-slider-item">
+                <img src="img/e652fe3080377d1f72336d8b89b09492.jpg" alt="" class="shop__img2">
+              </div>
+
+            </div>
+          </div>
+          <!-- Кнопки для перехода к предыдущему и следующему слайду -->
+          <button class="itc-slider-btn itc-slider-btn-prev"></button>
+          <button class="itc-slider-btn itc-slider-btn-next"></button>
+        </div>
+        <div class="accordion" id="accordion-1">
+          <div class="accordion__item">
+            <h2 class="accordion__header">Описание</h2>
+            <div class="accordion__body">
+              <p class="shop__text">13 карт — вселенная Фёдора Нечитайло, состоящая из серии комиксов. На данный
+                момент существует 2 комикса серии: 1-ый — Фёдор х 9 (ждёт ремейка, не полностью каноничен) и 2-ой —
+                Земля Королей. Всего в серии планируется около 5-ти произведений. Комиксы 13 карт выходят не совсем
+                по порядку и могут читаться независимо, хоть и дополняют друг друга.
+
+                Главными героями выступают 8 клонов Фёдора — магических существ из карточной вселенной, принявших
+                человеческий облик. Каждый из них олицетворяет короля или валета карточной масти, а также часть
+                личности.</p>
+            </div>
+          </div>
+          <div class="accordion__item">
+            <h2 class="accordion__header">Цена</h2>
+            <div class="accordion__body">
+              <p class="shop__price">2 500 ₽</p>
+              <button class="shop__btn" id="btn" onclick="buy()">Купить</button>
+            </div>
+          </div>
+          <div class="accordion__item">
+            <h2 class="accordion__header">Почему стоит покупать здесь комиксы?</h2>
+            <div class="accordion__body">
+              <p class="accordion__pros">очень качественные картинки, написано без ошибок и интересный сюжет!</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <section class="clock">
+      <div class="container container_clock">
+        <div id="time"></div>
+      </div>
+    </section>
+
+    <section class="video">
+      <video id="myVideo" autoplay muted loop>
+        <source src="video/video1.mp4" type="video/mp4">
+      </video>
+
+      <div class="video__content">
+        <div class="container">
+          <h1 class="video__title">Земля Королей в двух словах</h1>
+          <p class="video__text">Ржачный пересказ</p>
+          <button class="video__btn" id="play" onclick="play()">Play</button>
+          <button class="video__btn" id="mute" onclick="mute()">On</button>
+          <button class="video__btn" onclick="next()">Next</button>
+          <button class="video__btn" onclick="prev()">Prev</button>
+
+        </div>
+      </div>
+    </section>
+
+    <button class="basket" id="backet">
+      <img src="img/basket__icon.png"  class="basket__img">
+      <p class="price">0</p>
+    </button>
+  </main>
+
+  <footer class="footer">
+    <div class="container container__footer">
+      <p class="footer__text">&copy; Интернет магазин по продаже комиксов</p>
+    </div>
+    <div class="container container__footer2">
+      <p class="footer__text">Связь</p>
+      <ul class="footer__list">
+        <li class="footer__item"><a href="https://wa.me/qr/7SNVI5JL4DVBH1" class="footer__link">WhatsApp</a></li>
+        <li class="footer__item"><a href="https://vk.com/winchester349" class="footer__link">VK</a></li>
+        <li class="footer__item"><a href="https://t.me/lisa_durasha" class="footer__link">Telegram</a></li>
+      </ul>
+    </div>
+  </footer>
+  <script src="js/button.js"></script>
+  <script src="js/itc-slider.js"></script>
+  <script src="js/menu.js"></script>
+  <script src="js/accordion.js"></script>
+  <script src="js/theme.js"></script>
+  <script src="js/burger.js"></script>
+  <script src="js/time.js"></script>
+  <script src="js/video-player.js"></script>
+</body>
+
+</html>
